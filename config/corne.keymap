@@ -14,7 +14,7 @@
 #define Utils 3
 #define Conf   4
 #define VSCode 5                 
-
+#define VDJ 6  
 
 / {
   behaviors {
@@ -49,7 +49,7 @@
    &kp APOS   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                         &kp N6    &kp N7   &kp N8 &kp N9  &kp N0 &kp BSPC
    &trans &trans &trans &trans &trans &trans                                     &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans   &trans   &trans   &trans                          &kp APOS &kp PLUS  &kp PIPE  &kp FSLH &kp PIPE &kp TILDE
-                &kp LEFT &kp RIGHT &kp LGUI                                      &kp RET  &trans   &mo Conf
+                &kp LEFT &kp RIGHT &kp LGUI                                      &kp LEFT  &kp RIGHT   &mo Conf
                         >;
                 };
       raise_layer {
@@ -76,7 +76,7 @@
           bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+   &to Default &to VDJ   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };         
@@ -89,7 +89,28 @@
                                            &kp LCTRL        &kp LALT       &kp SPACE          &kp LC(ENTER) &kp LC(PLUS) &kp LC(MINUS)
                         >;
                 };             
-                
+        vdj {
+          display-name = "vdj";
+          bindings = <
+   &kp LA(N1) &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)    &kp LA(N6)     &kp LA(N7)  &kp LA(N8) &kp LA(N9)   &kp LA(N0) &kp LA(MINUS)   &kp LA(EQUAL)
+   &kp LA(W)  &kp LA(R)     &kp LA(A)    &kp LA(S)      &kp LA(D)     &kp LA(F)      &kp LA(J)  &kp LA(K) &kp LA(L)   &kp LA(BSLH) &kp LA(P)   &kp LA(I)
+   &kp LA(E)  &kp LA(T)     &kp LA(Z)    &kp LA(X)      &kp LA(C)     &kp LA(V)      &kp LA(M)  &kp LA(COMMA) &kp LA(DOT)   &kp LA(FSLH) &kp LA(LBKT)   &kp LA(O)
+                &to Conf    &kp LA(BSPC)  &kp LA(UP)                              &kp LA(DOWN) &kp LA(LEFT) &kp LA(RIGHT)
+                        >;
+                };             
+        vdjsettings {
+          display-name = "vdj-settings";
+          bindings = <
+   &kp LA(N1) &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)    &kp LA(N6)     &kp LA(N7)  &kp LA(N8) &kp LA(N9)   &kp LA(N0) &kp LA(MINUS)   &kp LA(EQUAL)
+   &kp LA(W)  &kp LA(Q)     &kp LA(G)    &kp LA(S)      &kp LA(D)     &kp LA(F)      &kp LA(J)  &kp LA(K) &kp LA(L)   &kp LA(BSLH) &kp LA(P)   &kp LA(I)
+   &kp LA(E)  &kp LA(Y)     &kp LA(Z)    &kp LA(X)      &kp LA(C)     &kp LA(V)      &kp LA(M)  &kp LA(COMMA) &kp LA(DOT)   &kp LA(FSLH) &kp LA(LBKT)   &kp LA(O)
+                &kp LA(TAB)    &kp LA(BSPC)  &kp LA(UP)                              &kp LA(DOWN) &kp LA(LEFT) &kp LA(RIGHT)
+                        >;
+                };             
+                                        
           
         };
-};
+
+;
+
+};/
